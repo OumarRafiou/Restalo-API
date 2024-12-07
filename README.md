@@ -26,3 +26,12 @@ To build the project locally, run the following command:
 
 ```bash
 mvn clean install
+
+---
+
+## Run the Project
+To run the project locally, use the following Maven command:
+
+```bash
+mvn spring-boot:run
+This will start the Spring Boot application on your local machine.
