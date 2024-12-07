@@ -20,3 +20,9 @@ These instructions will help you set up the project on your local machine for de
 
 ---
 
+## Build the Project
+
+To build the project locally, run the following command:
+
+```bash
+mvn clean install
