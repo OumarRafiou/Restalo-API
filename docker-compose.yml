@@ -1,0 +1,46 @@
+
+version: "3.8" # Dernière version à ce jour
+
+services: # Définir les services
+
+  # Pour tester votre API à partir du code local
+  api-local:
+    build: . # Spécifie qu'on cherche le Dockerfile dans le dossier courant pour builder le container
+    environment: # Variables d'environnement à envoyer
+      PORT: 80 # port interne
+      # Notez que le host est "mongo" comme le nom du 2ème service (URL spécial)
+      # et que le username et password correspondent aux variables d'environnement spécifiées plus bas
+      MONGO_CLUSTER_URL: mongodb://root:example@mongo:27017
+      MONGO_DATABASE: local
+    ports: # Ports à repartager au host (host : container)
+      - 8081:80 # Utiliser http://localhost:8081 pour communiquer avec l'API
+    command: mvn exec:java -Dpersistence=mongo
+
+  # Pour tester votre API à partir de l'image Docker sur Github
+  api-remote:
+    image: ghcr.io/glo2003-h24-eq23/restalo-h24-eq23:dev    # le nom de votre image Docker, suivi de :<branche/tag>
+    environment:
+      PORT: 80 # port interne
+
+      # Notez que le host est "mongo" comme le nom du 2ème service (URL spécial)
+      # et que le username et password correspondent aux variables d'environnement spécifiées plus bas!
+      MONGO_CLUSTER_URL: mongodb://root:example@mongo:27017
+      MONGO_DATABASE: local
+    ports: # Ports à repartager au host (host : container)
+      - 8082:80 # Utiliser http://localhost:8082 pour communiquer avec l'API
+    command: mvn exec:java -Dpersistence=mongo
+
+
+  mongo:
+    image: mongo:7
+    environment: # Importants pour éviter une création aléatoire. Pas besoin d'être sécure, c'est local!
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    ports: # Pas obligé si on ne veut pas pouvoir y accéder à partir du host
+      - 27017:27017
+    volumes:
+      - mongo:/data/db
+
+volumes:
+  mongo:
+
