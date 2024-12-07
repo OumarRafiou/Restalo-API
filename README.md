@@ -1,10 +1,24 @@
 Restaurant Reservation API
-Overview
-The Restaurant Reservation API allows restaurant owners to manage reservations effectively. This API provides endpoints to create, read, update, and delete reservations, enabling both customers and staff to handle restaurant bookings seamlessly. With this API, restaurants can manage their reservations, check availability, and maintain a smooth operation.
+🎯 Overview
+The Restaurant Reservation API is designed to simplify restaurant reservation management. It provides a set of endpoints for restaurant owners and customers to create, view, modify, and cancel reservations, ensuring smooth operations.
 
-Features
-Create Reservation: Allows customers to make a reservation by providing their details (name, contact, number of people, reservation time, etc.).
-Get Reservation Details: Allows users to fetch details of an existing reservation using reservation ID.
-Update Reservation: Allows modification of an existing reservation.
-Cancel Reservation: Enables users to cancel a reservation.
-Get Available Slots: Allows users to check the available reservation slots for a specific date and time.
+With this API, restaurants can:
+
+Manage reservations effectively.
+Check availability for specific time slots.
+Streamline operations with automated booking management.
+🔑 Features
+Create Reservation:
+Allows customers to make a reservation by providing necessary details such as their name, contact information, party size, and reservation time.
+
+Get Reservation Details:
+Enables users to fetch details of an existing reservation using the reservation ID.
+
+Update Reservation:
+Allows customers to update their reservation information, including time, party size, or other details.
+
+Cancel Reservation:
+Provides the ability to cancel an existing reservation, freeing up the space for other guests.
+
+Get Available Slots:
+Helps customers check available time slots for a specific date and time.
