@@ -1,24 +1,22 @@
-Restaurant Reservation API
-🎯 Overview
-The Restaurant Reservation API is designed to simplify restaurant reservation management. It provides a set of endpoints for restaurant owners and customers to create, view, modify, and cancel reservations, ensuring smooth operations.
+# Restalo
 
-With this API, restaurants can:
+Restalo is an API for managing restaurant reservations. It provides functionalities for creating and managing reservations, searching for restaurants and reservations, and reviewing restaurants.
 
-Manage reservations effectively.
-Check availability for specific time slots.
-Streamline operations with automated booking management.
-🔑 Features
-Create Reservation:
-Allows customers to make a reservation by providing necessary details such as their name, contact information, party size, and reservation time.
+**Key Features**:
+- **Create & Manage Reservations**: Book, update, and cancel reservations.
+- **Search Restaurants**: Find restaurants based on availability, cuisine, location, etc.
+- **Review Restaurants**: Leave and view reviews for restaurants.
 
-Get Reservation Details:
-Enables users to fetch details of an existing reservation using the reservation ID.
+---
 
-Update Reservation:
-Allows customers to update their reservation information, including time, party size, or other details.
+## Getting Started
 
-Cancel Reservation:
-Provides the ability to cancel an existing reservation, freeing up the space for other guests.
+These instructions will help you set up the project on your local machine for development and testing purposes.
 
-Get Available Slots:
-Helps customers check available time slots for a specific date and time.
+### Prerequisites
+
+- **Java** 21
+- **Maven** 3.x
+
+---
+
